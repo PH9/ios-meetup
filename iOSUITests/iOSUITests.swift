@@ -8,7 +8,7 @@ class iOSUITests: XCTestCase {
     }
 
     func testExample() {
-        
+
     }
 
 }

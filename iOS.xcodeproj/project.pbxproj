@@ -7,16 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		165E9BF022C26BB900724E7A /* MainViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165E9BEF22C26BB900724E7A /* MainViewControllerTests.swift */; };
 		1692C77B22C1C79D00D9015D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1692C77A22C1C79D00D9015D /* AppDelegate.swift */; };
 		1692C77D22C1C79D00D9015D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1692C77C22C1C79D00D9015D /* SceneDelegate.swift */; };
-		1692C77F22C1C79D00D9015D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1692C77E22C1C79D00D9015D /* ViewController.swift */; };
+		1692C77F22C1C79D00D9015D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1692C77E22C1C79D00D9015D /* MainViewController.swift */; };
 		1692C78222C1C79D00D9015D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1692C78022C1C79D00D9015D /* Main.storyboard */; };
 		1692C78422C1C79E00D9015D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1692C78322C1C79E00D9015D /* Assets.xcassets */; };
 		1692C78722C1C79E00D9015D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1692C78522C1C79E00D9015D /* LaunchScreen.storyboard */; };
 		1692C79222C1C79E00D9015D /* iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1692C79122C1C79E00D9015D /* iOSTests.swift */; };
 		1692C79D22C1C79E00D9015D /* iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1692C79C22C1C79E00D9015D /* iOSUITests.swift */; };
-		1692C7AC22C1CCED00D9015D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1692C7AB22C1CCED00D9015D /* Alamofire.framework */; };
-		1692C7AD22C1CCED00D9015D /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1692C7AB22C1CCED00D9015D /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		16FB058E22C261B100BDC19E /* API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16FB056B22C260AA00BDC19E /* API.framework */; };
+		16FB058F22C261B100BDC19E /* API.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 16FB056B22C260AA00BDC19E /* API.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		16FB05A022C2649000BDC19E /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FB059F22C2649000BDC19E /* MainPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,20 @@
 			remoteGlobalIDString = 1692C77622C1C79D00D9015D;
 			remoteInfo = iOS;
 		};
+		16FB056A22C260AA00BDC19E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16FB056522C260A900BDC19E /* API.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 16FB054B22C260A800BDC19E;
+			remoteInfo = API;
+		};
+		16FB056C22C260AA00BDC19E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16FB056522C260A900BDC19E /* API.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 16FB055422C260A900BDC19E;
+			remoteInfo = APITests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,7 +59,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1692C7AD22C1CCED00D9015D /* Alamofire.framework in Embed Frameworks */,
+				16FB058F22C261B100BDC19E /* API.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,10 +67,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		165E9BEF22C26BB900724E7A /* MainViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerTests.swift; sourceTree = "<group>"; };
 		1692C77722C1C79D00D9015D /* iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1692C77A22C1C79D00D9015D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1692C77C22C1C79D00D9015D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1692C77E22C1C79D00D9015D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1692C77E22C1C79D00D9015D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		1692C78122C1C79D00D9015D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1692C78322C1C79E00D9015D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1692C78622C1C79E00D9015D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,7 +82,8 @@
 		1692C79822C1C79E00D9015D /* iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1692C79C22C1C79E00D9015D /* iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSUITests.swift; sourceTree = "<group>"; };
 		1692C79E22C1C79E00D9015D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1692C7AB22C1CCED00D9015D /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		16FB056522C260A900BDC19E /* API.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = API.xcodeproj; path = API/API.xcodeproj; sourceTree = "<group>"; };
+		16FB059F22C2649000BDC19E /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1692C7AC22C1CCED00D9015D /* Alamofire.framework in Frameworks */,
+				16FB058E22C261B100BDC19E /* API.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,11 +115,11 @@
 		1692C76E22C1C79D00D9015D = {
 			isa = PBXGroup;
 			children = (
+				16FB056522C260A900BDC19E /* API.xcodeproj */,
 				1692C77922C1C79D00D9015D /* iOS */,
 				1692C79022C1C79E00D9015D /* iOSTests */,
 				1692C79B22C1C79E00D9015D /* iOSUITests */,
 				1692C77822C1C79D00D9015D /* Products */,
-				1692C7AA22C1CCED00D9015D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,13 +136,12 @@
 		1692C77922C1C79D00D9015D /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				16FB059E22C2648000BDC19E /* Main */,
+				1692C78822C1C79E00D9015D /* Info.plist */,
 				1692C77A22C1C79D00D9015D /* AppDelegate.swift */,
 				1692C77C22C1C79D00D9015D /* SceneDelegate.swift */,
-				1692C77E22C1C79D00D9015D /* ViewController.swift */,
-				1692C78022C1C79D00D9015D /* Main.storyboard */,
 				1692C78322C1C79E00D9015D /* Assets.xcassets */,
 				1692C78522C1C79E00D9015D /* LaunchScreen.storyboard */,
-				1692C78822C1C79E00D9015D /* Info.plist */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -147,12 +164,24 @@
 			path = iOSUITests;
 			sourceTree = "<group>";
 		};
-		1692C7AA22C1CCED00D9015D /* Frameworks */ = {
+		16FB056622C260A900BDC19E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1692C7AB22C1CCED00D9015D /* Alamofire.framework */,
+				16FB056B22C260AA00BDC19E /* API.framework */,
+				16FB056D22C260AA00BDC19E /* APITests.xctest */,
 			);
-			name = Frameworks;
+			name = Products;
+			sourceTree = "<group>";
+		};
+		16FB059E22C2648000BDC19E /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				16FB059F22C2649000BDC19E /* MainPresenter.swift */,
+				1692C77E22C1C79D00D9015D /* MainViewController.swift */,
+				165E9BEF22C26BB900724E7A /* MainViewControllerTests.swift */,
+				1692C78022C1C79D00D9015D /* Main.storyboard */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +275,12 @@
 			mainGroup = 1692C76E22C1C79D00D9015D;
 			productRefGroup = 1692C77822C1C79D00D9015D /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 16FB056622C260A900BDC19E /* Products */;
+					ProjectRef = 16FB056522C260A900BDC19E /* API.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				1692C77622C1C79D00D9015D /* iOS */,
@@ -254,6 +289,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		16FB056B22C260AA00BDC19E /* API.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = API.framework;
+			remoteRef = 16FB056A22C260AA00BDC19E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		16FB056D22C260AA00BDC19E /* APITests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = APITests.xctest;
+			remoteRef = 16FB056C22C260AA00BDC19E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1692C77522C1C79D00D9015D /* Resources */ = {
@@ -287,9 +339,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1692C77F22C1C79D00D9015D /* ViewController.swift in Sources */,
+				1692C77F22C1C79D00D9015D /* MainViewController.swift in Sources */,
 				1692C77B22C1C79D00D9015D /* AppDelegate.swift in Sources */,
 				1692C77D22C1C79D00D9015D /* SceneDelegate.swift in Sources */,
+				16FB05A022C2649000BDC19E /* MainPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1692C79222C1C79E00D9015D /* iOSTests.swift in Sources */,
+				165E9BF022C26BB900724E7A /* MainViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,10 +517,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -484,10 +534,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
