@@ -15,6 +15,8 @@
 		1692C78722C1C79E00D9015D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1692C78522C1C79E00D9015D /* LaunchScreen.storyboard */; };
 		1692C79222C1C79E00D9015D /* iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1692C79122C1C79E00D9015D /* iOSTests.swift */; };
 		1692C79D22C1C79E00D9015D /* iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1692C79C22C1C79E00D9015D /* iOSUITests.swift */; };
+		1692C7AC22C1CCED00D9015D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1692C7AB22C1CCED00D9015D /* Alamofire.framework */; };
+		1692C7AD22C1CCED00D9015D /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1692C7AB22C1CCED00D9015D /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1692C7AE22C1CCED00D9015D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1692C7AD22C1CCED00D9015D /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1692C77722C1C79D00D9015D /* iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1692C77A22C1C79D00D9015D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +65,7 @@
 		1692C79822C1C79E00D9015D /* iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1692C79C22C1C79E00D9015D /* iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSUITests.swift; sourceTree = "<group>"; };
 		1692C79E22C1C79E00D9015D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1692C7AB22C1CCED00D9015D /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1692C7AC22C1CCED00D9015D /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +101,7 @@
 				1692C79022C1C79E00D9015D /* iOSTests */,
 				1692C79B22C1C79E00D9015D /* iOSUITests */,
 				1692C77822C1C79D00D9015D /* Products */,
+				1692C7AA22C1CCED00D9015D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +147,14 @@
 			path = iOSUITests;
 			sourceTree = "<group>";
 		};
+		1692C7AA22C1CCED00D9015D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1692C7AB22C1CCED00D9015D /* Alamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,6 +165,7 @@
 				1692C77322C1C79D00D9015D /* Sources */,
 				1692C77422C1C79D00D9015D /* Frameworks */,
 				1692C77522C1C79D00D9015D /* Resources */,
+				1692C7AE22C1CCED00D9015D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -435,6 +463,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -452,6 +484,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
