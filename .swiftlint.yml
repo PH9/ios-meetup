@@ -1,0 +1,10 @@
+excluded:
+  - Build/
+  - Carthage/
+  - DerivedData/
+  - Frameworks/
+  - Pods/
+
+trailing_comma:
+  mandatory_comma: true
+
