@@ -6,7 +6,7 @@ protocol MainPresenterDelegate: class {
 }
 
 protocol MainPresenterProtocol {
-  
+
   var delete: MainPresenterDelegate? { get }
 
   func getPosts()
@@ -27,7 +27,7 @@ class MainPresenter {
       }
     }
   }
-  
+
   func getComments(postId: Int) {
     WebService.shared.request(CommentsRequest(postId: postId)) { [weak self] result in
       guard let s = self else { return }

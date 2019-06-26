@@ -16,6 +16,8 @@
 		1692C78722C1C79E00D9015D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1692C78522C1C79E00D9015D /* LaunchScreen.storyboard */; };
 		1692C79222C1C79E00D9015D /* iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1692C79122C1C79E00D9015D /* iOSTests.swift */; };
 		1692C79D22C1C79E00D9015D /* iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1692C79C22C1C79E00D9015D /* iOSUITests.swift */; };
+		16ED0C2022C34FA100308364 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ED0C1F22C34FA100308364 /* PostCell.swift */; };
+		16ED0C2322C34FE900308364 /* ValueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ED0C2222C34FE900308364 /* ValueCell.swift */; };
 		16FB058E22C261B100BDC19E /* API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16FB056B22C260AA00BDC19E /* API.framework */; };
 		16FB058F22C261B100BDC19E /* API.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 16FB056B22C260AA00BDC19E /* API.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		16FB05A022C2649000BDC19E /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FB059F22C2649000BDC19E /* MainPresenter.swift */; };
@@ -82,6 +84,8 @@
 		1692C79822C1C79E00D9015D /* iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1692C79C22C1C79E00D9015D /* iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSUITests.swift; sourceTree = "<group>"; };
 		1692C79E22C1C79E00D9015D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16ED0C1F22C34FA100308364 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		16ED0C2222C34FE900308364 /* ValueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueCell.swift; sourceTree = "<group>"; };
 		16FB056522C260A900BDC19E /* API.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = API.xcodeproj; path = API/API.xcodeproj; sourceTree = "<group>"; };
 		16FB059F22C2649000BDC19E /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,6 +140,7 @@
 		1692C77922C1C79D00D9015D /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				16ED0C2122C34FDF00308364 /* Library */,
 				16FB059E22C2648000BDC19E /* Main */,
 				1692C78822C1C79E00D9015D /* Info.plist */,
 				1692C77A22C1C79D00D9015D /* AppDelegate.swift */,
@@ -164,6 +169,14 @@
 			path = iOSUITests;
 			sourceTree = "<group>";
 		};
+		16ED0C2122C34FDF00308364 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				16ED0C2222C34FE900308364 /* ValueCell.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
 		16FB056622C260A900BDC19E /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +192,7 @@
 				16FB059F22C2649000BDC19E /* MainPresenter.swift */,
 				1692C77E22C1C79D00D9015D /* MainViewController.swift */,
 				165E9BEF22C26BB900724E7A /* MainViewControllerTests.swift */,
+				16ED0C1F22C34FA100308364 /* PostCell.swift */,
 				1692C78022C1C79D00D9015D /* Main.storyboard */,
 			);
 			path = Main;
@@ -340,7 +354,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1692C77F22C1C79D00D9015D /* MainViewController.swift in Sources */,
+				16ED0C2322C34FE900308364 /* ValueCell.swift in Sources */,
 				1692C77B22C1C79D00D9015D /* AppDelegate.swift in Sources */,
+				16ED0C2022C34FA100308364 /* PostCell.swift in Sources */,
 				1692C77D22C1C79D00D9015D /* SceneDelegate.swift in Sources */,
 				16FB05A022C2649000BDC19E /* MainPresenter.swift in Sources */,
 			);
@@ -517,6 +533,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4F3TR5RP66;
 				INFOPLIST_FILE = iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -534,6 +551,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4F3TR5RP66;
 				INFOPLIST_FILE = iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

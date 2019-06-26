@@ -13,7 +13,7 @@ public struct CommentsRequest: RequestProtocol {
   public let body: [String: Any]
 
   public typealias ResponseType = Comments
-  
+
   public init(postId: Int) {
     body = [
       "postId": postId

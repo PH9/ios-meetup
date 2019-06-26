@@ -19,18 +19,18 @@ class MainViewControllerTests: XCTestCase {
     let expectation = XCTestExpectation(description: "Called")
     var didGetPost = 0
     var didGetError = 0
-    
+
     override func mainPresenter(_ mainPresenter: MainPresenter, didGet posts: Posts) {
       didGetPost += 1
       expectation.fulfill()
     }
-    
+
     override func mainPresenter(_ mainPresenter: MainPresenter, didGet error: APIError) {
       didGetError += 1
       expectation.fulfill()
     }
   }
-  
+
   func testMainViewController() {
     let mainViewController = MyMainViewController()
     let spy = SpyMainPresenter()
