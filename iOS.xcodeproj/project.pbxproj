@@ -18,6 +18,7 @@
 		1692C79D22C1C79E00D9015D /* iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1692C79C22C1C79E00D9015D /* iOSUITests.swift */; };
 		16ED0C2022C34FA100308364 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ED0C1F22C34FA100308364 /* PostCell.swift */; };
 		16ED0C2322C34FE900308364 /* ValueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ED0C2222C34FE900308364 /* ValueCell.swift */; };
+		16ED0C2A22C4CBBB00308364 /* ValueCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ED0C2922C4CBBB00308364 /* ValueCellDataSource.swift */; };
 		16FB058E22C261B100BDC19E /* API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16FB056B22C260AA00BDC19E /* API.framework */; };
 		16FB058F22C261B100BDC19E /* API.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 16FB056B22C260AA00BDC19E /* API.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		16FB05A022C2649000BDC19E /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FB059F22C2649000BDC19E /* MainPresenter.swift */; };
@@ -86,6 +87,7 @@
 		1692C79E22C1C79E00D9015D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16ED0C1F22C34FA100308364 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		16ED0C2222C34FE900308364 /* ValueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueCell.swift; sourceTree = "<group>"; };
+		16ED0C2922C4CBBB00308364 /* ValueCellDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueCellDataSource.swift; sourceTree = "<group>"; };
 		16FB056522C260A900BDC19E /* API.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = API.xcodeproj; path = API/API.xcodeproj; sourceTree = "<group>"; };
 		16FB059F22C2649000BDC19E /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				16ED0C2222C34FE900308364 /* ValueCell.swift */,
+				16ED0C2922C4CBBB00308364 /* ValueCellDataSource.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -366,7 +369,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ \"$CONFIGURATION\" == \"Debug\" ]; then\n  \"${SRCROOT}/Scripts/swiftlint.sh\"\nfi\n";
+			shellScript = "if [ \"$CONFIGURATION\" == \"Debug\" ]; then\n  \"${SRCROOT}/script/swiftlint.sh\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -375,6 +378,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16ED0C2A22C4CBBB00308364 /* ValueCellDataSource.swift in Sources */,
 				1692C77F22C1C79D00D9015D /* MainViewController.swift in Sources */,
 				16ED0C2322C34FE900308364 /* ValueCell.swift in Sources */,
 				1692C77B22C1C79D00D9015D /* AppDelegate.swift in Sources */,
