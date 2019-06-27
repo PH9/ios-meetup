@@ -1,5 +1,16 @@
-protocol ValueCell {
+public protocol ValueCell {
+  static var reusableId: String { get }
+  associatedtype Value
+  func configuraWith(value: Value)
+}
 
-    associatedtype Value
-    func configuraWith(value: Value)
+import UIKit
+
+extension UIView {
+  public static var reusableId: String {
+    return description()
+      .components(separatedBy: ".")
+      .dropFirst()
+      .joined(separator: ".")
+  }
 }
