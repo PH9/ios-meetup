@@ -2,7 +2,7 @@ import XCTest
 @testable import iOS
 import API
 
-class MainViewControllerTests: XCTestCase {
+class MainViewControllerTests: TestCase {
 
   class SpyMainPresenter: MainPresenter {
 
@@ -46,4 +46,14 @@ class MainViewControllerTests: XCTestCase {
     XCTAssertEqual(1, mainViewController.didGetPost)
     XCTAssertEqual(0, mainViewController.didGetError)
   }
+
+  func testView() {
+    [Device.phone4_7inch, Device.phone5_8inch, Device.pad].forEach { device in
+      let controller = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()!
+      let (parent, _) = traitControllers(device: device, child: controller)
+
+      FBSnapshotVerifyView(parent.view, identifier: "\(device)")
+    }
+  }
+
 }

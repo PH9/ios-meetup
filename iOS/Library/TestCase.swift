@@ -1,10 +1,12 @@
 import XCTest
+import FBSnapshotTestCase
 
-class TestCase: XCTestCase {
+class TestCase: FBSnapshotTestCase {
 
     override func setUp() {
       super.setUp()
       preferredSimulatorCheck()
+      recordMode = false
     }
 
     override func tearDown() {

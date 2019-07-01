@@ -3,11 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		165E9BF022C26BB900724E7A /* MainViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165E9BEF22C26BB900724E7A /* MainViewControllerTests.swift */; };
+		166A812422C9FFB6003CAD1D /* FBSnapshotTestCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 166A812322C9FFB6003CAD1D /* FBSnapshotTestCase.framework */; };
+		166A812522C9FFBC003CAD1D /* FBSnapshotTestCase.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 166A812322C9FFB6003CAD1D /* FBSnapshotTestCase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		166A812B22CA01E9003CAD1D /* TraitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166A812A22CA01E9003CAD1D /* TraitController.swift */; };
 		1692C77B22C1C79D00D9015D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1692C77A22C1C79D00D9015D /* AppDelegate.swift */; };
 		1692C77D22C1C79D00D9015D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1692C77C22C1C79D00D9015D /* SceneDelegate.swift */; };
 		1692C77F22C1C79D00D9015D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1692C77E22C1C79D00D9015D /* MainViewController.swift */; };
@@ -27,6 +30,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		166A811D22C9FDDC003CAD1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16FB056522C260A900BDC19E /* API.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 16FB054A22C260A800BDC19E;
+			remoteInfo = API;
+		};
 		1692C78E22C1C79E00D9015D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1692C76F22C1C79D00D9015D /* Project object */;
@@ -58,6 +68,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		166F799822C9F22C004A9DD2 /* Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				166A812522C9FFBC003CAD1D /* FBSnapshotTestCase.framework in Copy Files */,
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1692C7AE22C1CCED00D9015D /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -73,6 +94,8 @@
 
 /* Begin PBXFileReference section */
 		165E9BEF22C26BB900724E7A /* MainViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerTests.swift; sourceTree = "<group>"; };
+		166A812322C9FFB6003CAD1D /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSnapshotTestCase.framework; path = Carthage/Build/iOS/FBSnapshotTestCase.framework; sourceTree = "<group>"; };
+		166A812A22CA01E9003CAD1D /* TraitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitController.swift; sourceTree = "<group>"; };
 		1692C77722C1C79D00D9015D /* iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1692C77A22C1C79D00D9015D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1692C77C22C1C79D00D9015D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				166A812422C9FFB6003CAD1D /* FBSnapshotTestCase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +146,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		166A810922C9EFDD003CAD1D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				166A812322C9FFB6003CAD1D /* FBSnapshotTestCase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1692C76E22C1C79D00D9015D = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +162,7 @@
 				1692C79022C1C79E00D9015D /* iOSTests */,
 				1692C79B22C1C79E00D9015D /* iOSUITests */,
 				1692C77822C1C79D00D9015D /* Products */,
+				166A810922C9EFDD003CAD1D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -179,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				16ED0C3322C5C61100308364 /* TestCase.swift */,
+				166A812A22CA01E9003CAD1D /* TraitController.swift */,
 				16ED0C2222C34FE900308364 /* ValueCell.swift */,
 				16ED0C2922C4CBBB00308364 /* ValueCellDataSource.swift */,
 			);
@@ -223,6 +257,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				166A811E22C9FDDC003CAD1D /* PBXTargetDependency */,
 			);
 			name = iOS;
 			productName = iOS;
@@ -236,6 +271,7 @@
 				1692C78922C1C79E00D9015D /* Sources */,
 				1692C78A22C1C79E00D9015D /* Frameworks */,
 				1692C78B22C1C79E00D9015D /* Resources */,
+				166F799822C9F22C004A9DD2 /* Copy Files */,
 			);
 			buildRules = (
 			);
@@ -289,7 +325,7 @@
 				};
 			};
 			buildConfigurationList = 1692C77222C1C79D00D9015D /* Build configuration list for PBXProject "iOS" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -392,6 +428,7 @@
 				1692C77D22C1C79D00D9015D /* SceneDelegate.swift in Sources */,
 				16ED0C2E22C4CD6E00308364 /* MainViewDataSource.swift in Sources */,
 				16FB05A022C2649000BDC19E /* MainPresenter.swift in Sources */,
+				166A812B22CA01E9003CAD1D /* TraitController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +453,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		166A811E22C9FDDC003CAD1D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = API;
+			targetProxy = 166A811D22C9FDDC003CAD1D /* PBXContainerItemProxy */;
+		};
 		1692C78F22C1C79E00D9015D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1692C77622C1C79D00D9015D /* iOS */;
@@ -604,6 +646,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = iOSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -624,6 +670,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = iOSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -1,11 +1,14 @@
-# Carthage
-Carthage/Checkouts
-Carthage/Build
-
 DerivedData/
 
 xcuserdata/
 !*.xcodeproj/xcshareddata/
+
+# Carthage
+Carthage/Checkouts
+Carthage/Build
+
+# CocoaPods
+Pods/
 
 # Swift Package Manager
 # Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
