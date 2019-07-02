@@ -5,13 +5,6 @@ protocol PostPresenterDelegate: class {
   func postPresenter(_ postPresenter: PostPresenter, didGet error: APIError)
 }
 
-protocol PostPresenterProtocol {
-
-  var delete: PostPresenterDelegate? { get }
-
-  func getPosts()
-}
-
 class PostPresenter {
 
   weak var delegate: PostPresenterDelegate?
