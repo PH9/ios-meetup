@@ -27,17 +27,4 @@ class PostPresenter {
       }
     }
   }
-
-  func getComments(postId: Int) {
-    WebService.shared.request(CommentsRequest(postId: postId)) { [weak self] result in
-      guard let s = self else { return }
-      switch result {
-      case .success(let comments):
-        // TODO: Hanlde success response
-        print(comments)
-      case .failure(let error):
-        s.delegate?.postPresenter(s, didGet: error)
-      }
-    }
-  }
 }

@@ -30,6 +30,7 @@
 		16ED0C2E22C4CD6E00308364 /* PostViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ED0C2D22C4CD6E00308364 /* PostViewDataSource.swift */; };
 		16ED0C3422C5C61100308364 /* TestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ED0C3322C5C61100308364 /* TestCase.swift */; };
 		16EF3A3522CB0BBF00C03EAC /* post.json in Resources */ = {isa = PBXBuildFile; fileRef = 16EF3A3422CB0BBF00C03EAC /* post.json */; };
+		16EF3A3822CB348800C03EAC /* CommentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EF3A3722CB348800C03EAC /* CommentPresenter.swift */; };
 		16FB058E22C261B100BDC19E /* API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16FB056B22C260AA00BDC19E /* API.framework */; };
 		16FB058F22C261B100BDC19E /* API.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 16FB056B22C260AA00BDC19E /* API.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		16FB05A022C2649000BDC19E /* PostPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FB059F22C2649000BDC19E /* PostPresenter.swift */; };
@@ -127,6 +128,7 @@
 		16ED0C2D22C4CD6E00308364 /* PostViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewDataSource.swift; sourceTree = "<group>"; };
 		16ED0C3322C5C61100308364 /* TestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCase.swift; sourceTree = "<group>"; };
 		16EF3A3422CB0BBF00C03EAC /* post.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = post.json; sourceTree = "<group>"; };
+		16EF3A3722CB348800C03EAC /* CommentPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentPresenter.swift; sourceTree = "<group>"; };
 		16FB056522C260A900BDC19E /* API.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = API.xcodeproj; path = API/API.xcodeproj; sourceTree = "<group>"; };
 		16FB059F22C2649000BDC19E /* PostPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -186,6 +188,7 @@
 				166A813222CAFFC4003CAD1D /* Comment.storyboard */,
 				166A813622CB0000003CAD1D /* CommentTableCell.swift */,
 				166A813422CAFFD2003CAD1D /* CommentViewController.swift */,
+				16EF3A3722CB348800C03EAC /* CommentPresenter.swift */,
 			);
 			path = Comment;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16EF3A3822CB348800C03EAC /* CommentPresenter.swift in Sources */,
 				166A813522CAFFD2003CAD1D /* CommentViewController.swift in Sources */,
 				16ED0C2A22C4CBBB00308364 /* ValueCellDataSource.swift in Sources */,
 				1692C77F22C1C79D00D9015D /* PostViewController.swift in Sources */,
