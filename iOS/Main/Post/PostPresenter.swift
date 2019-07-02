@@ -1,29 +1,29 @@
 import API
 
-protocol MainPresenterDelegate: class {
-  func mainPresenter(_ mainPresenter: MainPresenter, didGet posts: Posts)
-  func mainPresenter(_ mainPresenter: MainPresenter, didGet error: APIError)
+protocol PostPresenterDelegate: class {
+  func postPresenter(_ postPresenter: PostPresenter, didGet posts: Posts)
+  func postPresenter(_ postPresenter: PostPresenter, didGet error: APIError)
 }
 
-protocol MainPresenterProtocol {
+protocol PostPresenterProtocol {
 
-  var delete: MainPresenterDelegate? { get }
+  var delete: PostPresenterDelegate? { get }
 
   func getPosts()
 }
 
-class MainPresenter {
+class PostPresenter {
 
-  weak var delegate: MainPresenterDelegate?
+  weak var delegate: PostPresenterDelegate?
 
   func getPosts() {
     WebService.shared.request(PostsRequest()) { [weak self] result in
       guard let s = self else { return }
       switch result {
       case .success(let posts):
-        s.delegate?.mainPresenter(s, didGet: posts)
+        s.delegate?.postPresenter(s, didGet: posts)
       case .failure(let error):
-        s.delegate?.mainPresenter(s, didGet: error)
+        s.delegate?.postPresenter(s, didGet: error)
       }
     }
   }
@@ -36,7 +36,7 @@ class MainPresenter {
         // TODO: Hanlde success response
         print(comments)
       case .failure(let error):
-        s.delegate?.mainPresenter(s, didGet: error)
+        s.delegate?.postPresenter(s, didGet: error)
       }
     }
   }

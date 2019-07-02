@@ -7,26 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		165E9BF022C26BB900724E7A /* MainViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165E9BEF22C26BB900724E7A /* MainViewControllerTests.swift */; };
+		165E9BF022C26BB900724E7A /* PostViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165E9BEF22C26BB900724E7A /* PostViewControllerTests.swift */; };
 		166A812422C9FFB6003CAD1D /* FBSnapshotTestCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 166A812322C9FFB6003CAD1D /* FBSnapshotTestCase.framework */; };
 		166A812522C9FFBC003CAD1D /* FBSnapshotTestCase.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 166A812322C9FFB6003CAD1D /* FBSnapshotTestCase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		166A812B22CA01E9003CAD1D /* TraitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166A812A22CA01E9003CAD1D /* TraitController.swift */; };
+		166A813022CAFC88003CAD1D /* Post.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 166A812E22CAFC88003CAD1D /* Post.storyboard */; };
+		166A813322CAFFC4003CAD1D /* Comment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 166A813222CAFFC4003CAD1D /* Comment.storyboard */; };
+		166A813522CAFFD2003CAD1D /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166A813422CAFFD2003CAD1D /* CommentViewController.swift */; };
+		166A813722CB0000003CAD1D /* CommentTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166A813622CB0000003CAD1D /* CommentTableCell.swift */; };
+		166A814122CB0A47003CAD1D /* JSONFileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166A813F22CB0A40003CAD1D /* JSONFileReader.swift */; };
 		1692C77B22C1C79D00D9015D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1692C77A22C1C79D00D9015D /* AppDelegate.swift */; };
 		1692C77D22C1C79D00D9015D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1692C77C22C1C79D00D9015D /* SceneDelegate.swift */; };
-		1692C77F22C1C79D00D9015D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1692C77E22C1C79D00D9015D /* MainViewController.swift */; };
+		1692C77F22C1C79D00D9015D /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1692C77E22C1C79D00D9015D /* PostViewController.swift */; };
 		1692C78222C1C79D00D9015D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1692C78022C1C79D00D9015D /* Main.storyboard */; };
 		1692C78422C1C79E00D9015D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1692C78322C1C79E00D9015D /* Assets.xcassets */; };
 		1692C78722C1C79E00D9015D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1692C78522C1C79E00D9015D /* LaunchScreen.storyboard */; };
 		1692C79222C1C79E00D9015D /* iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1692C79122C1C79E00D9015D /* iOSTests.swift */; };
 		1692C79D22C1C79E00D9015D /* iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1692C79C22C1C79E00D9015D /* iOSUITests.swift */; };
-		16ED0C2022C34FA100308364 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ED0C1F22C34FA100308364 /* PostCell.swift */; };
+		16ED0C2022C34FA100308364 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ED0C1F22C34FA100308364 /* PostTableViewCell.swift */; };
 		16ED0C2322C34FE900308364 /* ValueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ED0C2222C34FE900308364 /* ValueCell.swift */; };
 		16ED0C2A22C4CBBB00308364 /* ValueCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ED0C2922C4CBBB00308364 /* ValueCellDataSource.swift */; };
-		16ED0C2E22C4CD6E00308364 /* MainViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ED0C2D22C4CD6E00308364 /* MainViewDataSource.swift */; };
+		16ED0C2E22C4CD6E00308364 /* PostViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ED0C2D22C4CD6E00308364 /* PostViewDataSource.swift */; };
 		16ED0C3422C5C61100308364 /* TestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ED0C3322C5C61100308364 /* TestCase.swift */; };
+		16EF3A3522CB0BBF00C03EAC /* post.json in Resources */ = {isa = PBXBuildFile; fileRef = 16EF3A3422CB0BBF00C03EAC /* post.json */; };
 		16FB058E22C261B100BDC19E /* API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16FB056B22C260AA00BDC19E /* API.framework */; };
 		16FB058F22C261B100BDC19E /* API.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 16FB056B22C260AA00BDC19E /* API.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		16FB05A022C2649000BDC19E /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FB059F22C2649000BDC19E /* MainPresenter.swift */; };
+		16FB05A022C2649000BDC19E /* PostPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FB059F22C2649000BDC19E /* PostPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,13 +99,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		165E9BEF22C26BB900724E7A /* MainViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerTests.swift; sourceTree = "<group>"; };
+		165E9BEF22C26BB900724E7A /* PostViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewControllerTests.swift; sourceTree = "<group>"; };
 		166A812322C9FFB6003CAD1D /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSnapshotTestCase.framework; path = Carthage/Build/iOS/FBSnapshotTestCase.framework; sourceTree = "<group>"; };
 		166A812A22CA01E9003CAD1D /* TraitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitController.swift; sourceTree = "<group>"; };
+		166A812F22CAFC88003CAD1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = iOS/Main/Base.lproj/Post.storyboard; sourceTree = "<group>"; };
+		166A813222CAFFC4003CAD1D /* Comment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Comment.storyboard; sourceTree = "<group>"; };
+		166A813422CAFFD2003CAD1D /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		166A813622CB0000003CAD1D /* CommentTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableCell.swift; sourceTree = "<group>"; };
+		166A813F22CB0A40003CAD1D /* JSONFileReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONFileReader.swift; path = API/Library/JSONFileReader.swift; sourceTree = SOURCE_ROOT; };
 		1692C77722C1C79D00D9015D /* iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1692C77A22C1C79D00D9015D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1692C77C22C1C79D00D9015D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1692C77E22C1C79D00D9015D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		1692C77E22C1C79D00D9015D /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		1692C78122C1C79D00D9015D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1692C78322C1C79E00D9015D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1692C78622C1C79E00D9015D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -110,13 +121,14 @@
 		1692C79822C1C79E00D9015D /* iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1692C79C22C1C79E00D9015D /* iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSUITests.swift; sourceTree = "<group>"; };
 		1692C79E22C1C79E00D9015D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		16ED0C1F22C34FA100308364 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		16ED0C1F22C34FA100308364 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		16ED0C2222C34FE900308364 /* ValueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueCell.swift; sourceTree = "<group>"; };
 		16ED0C2922C4CBBB00308364 /* ValueCellDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueCellDataSource.swift; sourceTree = "<group>"; };
-		16ED0C2D22C4CD6E00308364 /* MainViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewDataSource.swift; sourceTree = "<group>"; };
+		16ED0C2D22C4CD6E00308364 /* PostViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewDataSource.swift; sourceTree = "<group>"; };
 		16ED0C3322C5C61100308364 /* TestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCase.swift; sourceTree = "<group>"; };
+		16EF3A3422CB0BBF00C03EAC /* post.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = post.json; sourceTree = "<group>"; };
 		16FB056522C260A900BDC19E /* API.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = API.xcodeproj; path = API/API.xcodeproj; sourceTree = "<group>"; };
-		16FB059F22C2649000BDC19E /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		16FB059F22C2649000BDC19E /* PostPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +166,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		166A813A22CB0585003CAD1D /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				16EF3A3422CB0BBF00C03EAC /* post.json */,
+				16FB059F22C2649000BDC19E /* PostPresenter.swift */,
+				16ED0C1F22C34FA100308364 /* PostTableViewCell.swift */,
+				1692C77E22C1C79D00D9015D /* PostViewController.swift */,
+				165E9BEF22C26BB900724E7A /* PostViewControllerTests.swift */,
+				16ED0C2D22C4CD6E00308364 /* PostViewDataSource.swift */,
+				166A812E22CAFC88003CAD1D /* Post.storyboard */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		166A813B22CB058B003CAD1D /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				166A813222CAFFC4003CAD1D /* Comment.storyboard */,
+				166A813622CB0000003CAD1D /* CommentTableCell.swift */,
+				166A813422CAFFD2003CAD1D /* CommentViewController.swift */,
+			);
+			path = Comment;
+			sourceTree = "<group>";
+		};
 		1692C76E22C1C79D00D9015D = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +218,7 @@
 				16ED0C2122C34FDF00308364 /* Library */,
 				16FB059E22C2648000BDC19E /* Main */,
 				1692C78822C1C79E00D9015D /* Info.plist */,
+				1692C78022C1C79D00D9015D /* Main.storyboard */,
 				1692C77A22C1C79D00D9015D /* AppDelegate.swift */,
 				1692C77C22C1C79D00D9015D /* SceneDelegate.swift */,
 				1692C78322C1C79E00D9015D /* Assets.xcassets */,
@@ -211,6 +248,7 @@
 		16ED0C2122C34FDF00308364 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				166A813F22CB0A40003CAD1D /* JSONFileReader.swift */,
 				16ED0C3322C5C61100308364 /* TestCase.swift */,
 				166A812A22CA01E9003CAD1D /* TraitController.swift */,
 				16ED0C2222C34FE900308364 /* ValueCell.swift */,
@@ -231,12 +269,8 @@
 		16FB059E22C2648000BDC19E /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				16FB059F22C2649000BDC19E /* MainPresenter.swift */,
-				1692C77E22C1C79D00D9015D /* MainViewController.swift */,
-				165E9BEF22C26BB900724E7A /* MainViewControllerTests.swift */,
-				16ED0C2D22C4CD6E00308364 /* MainViewDataSource.swift */,
-				16ED0C1F22C34FA100308364 /* PostCell.swift */,
-				1692C78022C1C79D00D9015D /* Main.storyboard */,
+				166A813B22CB058B003CAD1D /* Comment */,
+				166A813A22CB0585003CAD1D /* Post */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -373,8 +407,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1692C78722C1C79E00D9015D /* LaunchScreen.storyboard in Resources */,
+				166A813022CAFC88003CAD1D /* Post.storyboard in Resources */,
 				1692C78422C1C79E00D9015D /* Assets.xcassets in Resources */,
 				1692C78222C1C79D00D9015D /* Main.storyboard in Resources */,
+				166A813322CAFFC4003CAD1D /* Comment.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +418,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16EF3A3522CB0BBF00C03EAC /* post.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,14 +457,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				166A813522CAFFD2003CAD1D /* CommentViewController.swift in Sources */,
 				16ED0C2A22C4CBBB00308364 /* ValueCellDataSource.swift in Sources */,
-				1692C77F22C1C79D00D9015D /* MainViewController.swift in Sources */,
+				1692C77F22C1C79D00D9015D /* PostViewController.swift in Sources */,
+				166A813722CB0000003CAD1D /* CommentTableCell.swift in Sources */,
 				16ED0C2322C34FE900308364 /* ValueCell.swift in Sources */,
 				1692C77B22C1C79D00D9015D /* AppDelegate.swift in Sources */,
-				16ED0C2022C34FA100308364 /* PostCell.swift in Sources */,
+				16ED0C2022C34FA100308364 /* PostTableViewCell.swift in Sources */,
 				1692C77D22C1C79D00D9015D /* SceneDelegate.swift in Sources */,
-				16ED0C2E22C4CD6E00308364 /* MainViewDataSource.swift in Sources */,
-				16FB05A022C2649000BDC19E /* MainPresenter.swift in Sources */,
+				16ED0C2E22C4CD6E00308364 /* PostViewDataSource.swift in Sources */,
+				16FB05A022C2649000BDC19E /* PostPresenter.swift in Sources */,
 				166A812B22CA01E9003CAD1D /* TraitController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,8 +475,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				166A814122CB0A47003CAD1D /* JSONFileReader.swift in Sources */,
 				1692C79222C1C79E00D9015D /* iOSTests.swift in Sources */,
-				165E9BF022C26BB900724E7A /* MainViewControllerTests.swift in Sources */,
+				165E9BF022C26BB900724E7A /* PostViewControllerTests.swift in Sources */,
 				16ED0C3422C5C61100308364 /* TestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,6 +511,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		166A812E22CAFC88003CAD1D /* Post.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				166A812F22CAFC88003CAD1D /* Base */,
+			);
+			name = Post.storyboard;
+			sourceTree = "<group>";
+		};
 		1692C78022C1C79D00D9015D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -1,7 +1,7 @@
 import UIKit
 import API
 
-class PostCell: UITableViewCell, ValueCell {
+class PostTableViewCell: UITableViewCell, ValueCell {
 
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var bodyLabel: UILabel!
