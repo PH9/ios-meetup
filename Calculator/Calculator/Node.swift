@@ -7,10 +7,10 @@ public class Node {
   // MARK: - Fields
   private let `operator`: String
   private let value: Int
-  
+
   private let leftOperand: Node?
   private let rightOperand: Node?
-  
+
   // MARK: - Constructor
   public init(`operator`: String, leftOperand: Node, rightOperand: Node) {
     self.operator = `operator`
@@ -18,14 +18,14 @@ public class Node {
     self.rightOperand = rightOperand
     value = 0
   }
-  
+
   public init(value: Int) {
     self.value = value
     `operator` = "#"
     leftOperand = nil
     rightOperand = nil
   }
-  
+
   // MARK: - Functions
   public func compute() throws -> Int {
     switch `operator` {

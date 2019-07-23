@@ -16,7 +16,7 @@ public struct CommentsRequest: RequestProtocol {
 
   public init(postId: Int) {
     body = [
-      "postId": postId
+      "postId": postId,
     ]
   }
 }
