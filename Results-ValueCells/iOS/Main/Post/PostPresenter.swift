@@ -20,4 +20,8 @@ class PostPresenter {
       }
     }
   }
+
+  func showCommentViewController(postId: Int) {
+
+  }
 }

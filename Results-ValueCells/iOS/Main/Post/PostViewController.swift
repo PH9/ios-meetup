@@ -34,4 +34,8 @@ class PostViewController: UITableViewController, PostPresenterDelegate {
     // TODO: Show Error
     print(error)
   }
+
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//    presenter.showCommentViewController(postId: dataSource[indexPath])
+  }
 }

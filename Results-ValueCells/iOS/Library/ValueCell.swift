@@ -1,6 +1,6 @@
 public protocol ValueCell {
   static var reusableId: String { get }
-  associatedtype Value
+  associatedtype Value: Decodable
   func configuraWith(value: Value)
 }
 

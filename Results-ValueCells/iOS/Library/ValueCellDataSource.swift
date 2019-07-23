@@ -8,7 +8,7 @@ import UIKit
  */
 open class ValueCellDataSource: NSObject, UICollectionViewDataSource, UITableViewDataSource {
   private var values: [[(value: Any, reusableId: String)]] = []
-  
+
   /**
    Override this method to destructure `cell` and `value` in order to call the `configureWith(value:)` method
    on the cell with the value. This method is called by the internals of `ValueCellDataSource`, it does not
@@ -18,7 +18,7 @@ open class ValueCellDataSource: NSObject, UICollectionViewDataSource, UITableVie
    - parameter value: A value that is associated with the cell.
    */
   open func configure(cell: UICollectionViewCell, with value: Any) {}
-  
+
   /**
    Override this method to destructure `cell` and `value` in order to call the `configureWith(value:)` method
    on the cell with the value. This method is called by the internals of `ValueCellDataSource`, it does not
@@ -28,7 +28,7 @@ open class ValueCellDataSource: NSObject, UICollectionViewDataSource, UITableVie
    - parameter value: A value that is associated with the cell.
    */
   open func configure(cell: UITableViewCell, with value: Any) {}
-  
+
   /**
    Override this to perform any registrations of cell classes and nibs. Call this method from your controller
    before the data source is set on the collection view. If you are using prototype cells you do not need
@@ -37,7 +37,7 @@ open class ValueCellDataSource: NSObject, UICollectionViewDataSource, UITableVie
    - parameter collectionView: A collection view that needs to have cells registered.
    */
   open func registerClasses(collectionView _: UICollectionView?) {}
-  
+
   /**
    Override this to perform any registrations of cell classes and nibs. Call this method from your controller
    before the data source is set on the table view. If you are using prototype cells you do not need
@@ -46,14 +46,14 @@ open class ValueCellDataSource: NSObject, UICollectionViewDataSource, UITableVie
    - parameter tableView: A table view that needs to have cells registered.
    */
   open func registerClasses(tableView _: UITableView?) {}
-  
+
   /**
    Removes all values from the data source.
    */
   public final func clearValues() {
     self.values = [[]]
   }
-  
+
   /**
    Clears all the values stored in a particular section.
    
@@ -63,7 +63,7 @@ open class ValueCellDataSource: NSObject, UICollectionViewDataSource, UITableVie
     self.padValuesForSection(section)
     self.values[section] = []
   }
-  
+
   /**
    Inserts a single value at the beginning of the section specified.
    
@@ -85,7 +85,7 @@ open class ValueCellDataSource: NSObject, UICollectionViewDataSource, UITableVie
       self.values[section].insert((value, Cell.reusableId), at: 0)
       return IndexPath(row: 0, section: section)
   }
-  
+
   /**
    Adds a single value to the end of the section specified.
    
@@ -107,7 +107,7 @@ open class ValueCellDataSource: NSObject, UICollectionViewDataSource, UITableVie
       self.values[section].append((value, Cell.reusableId))
       return IndexPath(row: self.values[section].count - 1, section: section)
   }
-  
+
   /**
    Inserts a single value at the index and section specified.
    
@@ -118,7 +118,7 @@ open class ValueCellDataSource: NSObject, UICollectionViewDataSource, UITableVie
    
    - returns: The index path of the inserted row.
    */
-  
+
   @discardableResult
   public final func insertRow<Cell: ValueCell, Value: Any>(
     value: Value,
@@ -128,12 +128,12 @@ open class ValueCellDataSource: NSObject, UICollectionViewDataSource, UITableVie
     ) -> IndexPath
     where Cell.Value == Value {
       self.padValuesForSection(section)
-      
+
       self.values[section].insert((value, Cell.reusableId), at: index)
-      
+
       return IndexPath(row: index, section: section)
   }
-  
+
   public final func deleteRow<Cell: ValueCell, Value: Any>(
     value _: Value,
     cellClass _: Cell.Type,
@@ -142,12 +142,12 @@ open class ValueCellDataSource: NSObject, UICollectionViewDataSource, UITableVie
     ) -> IndexPath
     where Cell.Value == Value {
       self.padValuesForSection(section)
-      
+
       self.values[section].remove(at: index)
-      
+
       return IndexPath(row: index, section: section)
   }
-  
+
   /**
    Adds a single row to the end of a section without specifying a value. This can be useful for
    providing static rows.
@@ -159,7 +159,7 @@ open class ValueCellDataSource: NSObject, UICollectionViewDataSource, UITableVie
     self.padValuesForSection(section)
     self.values[section].append(((), cellIdentifier))
   }
-  
+
   /**
    Sets an entire section of static cells.
    
@@ -170,7 +170,7 @@ open class ValueCellDataSource: NSObject, UICollectionViewDataSource, UITableVie
     self.padValuesForSection(section)
     self.values[section] = cellIdentifiers.map { ((), $0) }
   }
-  
+
   /**
    Appends a section of values to the end of the data source.
    
@@ -186,7 +186,7 @@ open class ValueCellDataSource: NSObject, UICollectionViewDataSource, UITableVie
     Cell.Value == Value {
       self.values.append(values.map { ($0, Cell.reusableId) })
   }
-  
+
   /**
    Replaces a section with values.
    
@@ -204,7 +204,7 @@ open class ValueCellDataSource: NSObject, UICollectionViewDataSource, UITableVie
       self.padValuesForSection(section)
       self.values[section] = values.map { ($0, Cell.reusableId) }
   }
-  
+
   /**
    Replaces a row with a value.
    
@@ -222,7 +222,7 @@ open class ValueCellDataSource: NSObject, UICollectionViewDataSource, UITableVie
     Cell.Value == Value {
       self.values[section][row] = (value, Cell.reusableId)
   }
-  
+
   /**
    - parameter indexPath: An index path to retrieve a value.
    
@@ -231,7 +231,7 @@ open class ValueCellDataSource: NSObject, UICollectionViewDataSource, UITableVie
   public final subscript(indexPath: IndexPath) -> Any {
     return self.values[indexPath.section][indexPath.item].value
   }
-  
+
   /**
    - parameter section: The section to retrieve a value.
    - parameter item:    The item to retrieve a value.
@@ -241,7 +241,7 @@ open class ValueCellDataSource: NSObject, UICollectionViewDataSource, UITableVie
   public final subscript(itemSection itemSection: (item: Int, section: Int)) -> Any {
     return self.values[itemSection.section][itemSection.item].value
   }
-  
+
   /**
    - parameter section: The section to retrieve a value.
    
@@ -250,21 +250,21 @@ open class ValueCellDataSource: NSObject, UICollectionViewDataSource, UITableVie
   public final subscript(section section: Int) -> [Any] {
     return self.values[section].map { $0.value }
   }
-  
+
   /**
    - returns: The total number of items in the data source.
    */
   public final func numberOfItems() -> Int {
     return self.values.reduce(0) { accum, section in accum + section.count }
   }
-  
+
   /**
    - returns: The total number of items in given section, in the data source.
    */
   public final func numberOfItems(in section: Int) -> Int {
     return self.values[section].count
   }
-  
+
   /**
    - parameter indexPath: An index path that we want to convert to a linear index.
    
@@ -274,56 +274,56 @@ open class ValueCellDataSource: NSObject, UICollectionViewDataSource, UITableVie
     return self.values[0..<indexPath.section]
       .reduce(indexPath.item) { accum, section in accum + section.count }
   }
-  
+
   // MARK: UICollectionViewDataSource methods
-  
+
   public final func numberOfSections(in _: UICollectionView) -> Int {
     return self.values.count
   }
-  
+
   public final func collectionView(
     _: UICollectionView,
     numberOfItemsInSection section: Int
     ) -> Int {
     return self.values[section].count
   }
-  
+
   public final func collectionView(
     _ collectionView: UICollectionView,
     cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
     let (value, reusableId) = self.values[indexPath.section][indexPath.item]
-    
+
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reusableId, for: indexPath)
-    
+
     configure(cell: cell, with: value)
-    
+
     return cell
   }
-  
+
   // MARK: UITableViewDataSource methods
-  
+
   public final func numberOfSections(in _: UITableView) -> Int {
     return values.count
   }
-  
+
   public final func tableView(_: UITableView, numberOfRowsInSection section: Int) -> Int {
     return values[section].count
   }
-  
+
   public final func tableView(
     _ tableView: UITableView,
     cellForRowAt indexPath: IndexPath
     ) -> UITableViewCell {
     let (value, reusableId) = values[indexPath.section][indexPath.row]
-    
+
     let cell = tableView.dequeueReusableCell(withIdentifier: reusableId, for: indexPath)
-    
+
     configure(cell: cell, with: value)
-    
+
     return cell
   }
-  
+
   /**
    - parameter item:    An item index.
    - parameter section: A section index.
@@ -338,7 +338,7 @@ open class ValueCellDataSource: NSObject, UICollectionViewDataSource, UITableVie
     }
     return nil
   }
-  
+
   /**
    Only useful for testing.
    
@@ -348,17 +348,17 @@ open class ValueCellDataSource: NSObject, UICollectionViewDataSource, UITableVie
    */
   internal final subscript(testItemSection itemSection: (item: Int, section: Int)) -> Any? {
     let (item, section) = itemSection
-    
+
     if !self.values.isEmpty, self.values.count >= section,
       !self.values[section].isEmpty, self.values[section].count >= item {
       return self.values[itemSection.section][itemSection.item].value
     }
     return nil
   }
-  
+
   private func padValuesForSection(_ section: Int) {
     guard self.values.count <= section else { return }
-    
+
     (self.values.count...section).forEach { _ in
       self.values.append([])
     }
