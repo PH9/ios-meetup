@@ -1,11 +1,5 @@
 public class Operator {
 
-  let `operator`: String
-
-  public init(`operator`: String) {
-    self.operator = `operator`
-  }
-
   public static func plusNode(_ l: Node, _ r: Node) -> PlusNode {
     return PlusNode(l, r)
   }
