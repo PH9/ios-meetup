@@ -13,7 +13,6 @@
 		1651692A22E6C38000E2CF16 /* NodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1651692922E6C38000E2CF16 /* NodeTests.swift */; };
 		1691361622E7196400F2ADC1 /* ValueNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1691361522E7196400F2ADC1 /* ValueNode.swift */; };
 		1691361822E7198900F2ADC1 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1691361722E7198900F2ADC1 /* Node.swift */; };
-		1691361A22E71AE900F2ADC1 /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1691361922E71AE900F2ADC1 /* Operator.swift */; };
 		1691361C22E71E6100F2ADC1 /* OperatorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1691361B22E71E6100F2ADC1 /* OperatorNode.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +37,6 @@
 		1651692922E6C38000E2CF16 /* NodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeTests.swift; sourceTree = "<group>"; };
 		1691361522E7196400F2ADC1 /* ValueNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ValueNode.swift; path = "../../../../../System/Volumes/Data/Users/w/ios-meetup/Calculator/Calculator/ValueNode.swift"; sourceTree = "<group>"; };
 		1691361722E7198900F2ADC1 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Node.swift; path = "../../../../../System/Volumes/Data/Users/w/ios-meetup/Calculator/Calculator/Node.swift"; sourceTree = "<group>"; };
-		1691361922E71AE900F2ADC1 /* Operator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Operator.swift; path = "../../../../../System/Volumes/Data/Users/w/ios-meetup/Calculator/Calculator/Operator.swift"; sourceTree = "<group>"; };
 		1691361B22E71E6100F2ADC1 /* OperatorNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OperatorNode.swift; path = "../../../../../System/Volumes/Data/Users/w/ios-meetup/Calculator/Calculator/OperatorNode.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,7 +86,6 @@
 				1651692422E6C00400E2CF16 /* Calculator.swift */,
 				1691361722E7198900F2ADC1 /* Node.swift */,
 				1651692922E6C38000E2CF16 /* NodeTests.swift */,
-				1691361922E71AE900F2ADC1 /* Operator.swift */,
 				1691361B22E71E6100F2ADC1 /* OperatorNode.swift */,
 				1691361522E7196400F2ADC1 /* ValueNode.swift */,
 			);
@@ -209,7 +206,6 @@
 				1691361822E7198900F2ADC1 /* Node.swift in Sources */,
 				1651692522E6C00400E2CF16 /* Calculator.swift in Sources */,
 				1691361622E7196400F2ADC1 /* ValueNode.swift in Sources */,
-				1691361A22E71AE900F2ADC1 /* Operator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
