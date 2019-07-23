@@ -4,48 +4,55 @@ import XCTest
 class GodNodeTests: XCTestCase {
 
   func testDisplay_valueNode_printTheValue() {
-    let valueNode = ValueNode(value: 1)
+    let valueNode = ValueNode(1)
     XCTAssertEqual("1", try! valueNode.display())
   }
 
   func testDisplay_operatorNode_printTheEquation() {
-    let operatorNode = GodNode(operator: Operator(operator: "+"), leftOperand: ValueNode(value: 1), rightOperand: ValueNode(value: 2))
+    let n = Operator.plusNode(ValueNode(1), ValueNode(2))
+    let operatorNode = Calculator(n)
     XCTAssertEqual("1 + 2", try! operatorNode.display())
   }
 
   func testDisplay_complexOperationNodes() {
-    let f = GodNode(operator: Operator(operator: "*"), leftOperand: ValueNode(value: 2), rightOperand: ValueNode(value: 5))
-    let g = GodNode(operator: Operator(operator: "+"), leftOperand: ValueNode(value: 3), rightOperand: f)
+    let n = Operator.multiplyNode(ValueNode(2), ValueNode(5))
+    let f = Operator.plusNode(ValueNode(3), n)
+    let g = Calculator(f)
 
     XCTAssertEqual("3 + 2 * 5", try! g.display())
   }
 
   func testCompute_operationNode_givesTheComputedResult() {
-    let opsNode = GodNode(operator: Operator(operator: "-"), leftOperand: ValueNode(value: 5), rightOperand: ValueNode(value: 3))
+    let n = Operator.minusNode(ValueNode(5), ValueNode(3))
+    let opsNode = Calculator(n)
     XCTAssertEqual(2, try! opsNode.compute())
   }
 
   func testCompute_complexOperationNodes() {
-    let f = GodNode(operator: Operator(operator: "*"), leftOperand: ValueNode(value: 2), rightOperand: ValueNode(value: 5))
-    let g = GodNode(operator: Operator(operator: "+"), leftOperand: ValueNode(value: 3), rightOperand: f)
+    let n = Operator.multiplyNode(ValueNode(2), ValueNode(5))
+    let f = Operator.plusNode(ValueNode(3), n)
+    let g = Calculator(f)
 
     XCTAssertEqual(13, try! g.compute())
   }
 
   func testPlus() {
-    let node = GodNode(operator: Operator(operator: "+"), leftOperand: ValueNode(value: 3), rightOperand: ValueNode(value: 7))
+    let n = Operator.plusNode(ValueNode(3), ValueNode(7))
+    let node = Calculator(n)
     XCTAssertEqual(10, try! node.compute())
     XCTAssertEqual("3 + 7", try! node.display())
   }
 
   func testMinus() {
-    let node = GodNode(operator: Operator(operator: "-"), leftOperand: ValueNode(value: 3), rightOperand: ValueNode(value: 7))
+    let n = Operator.minusNode(ValueNode(3), ValueNode(7))
+    let node = Calculator(n)
     XCTAssertEqual(-4, try! node.compute())
     XCTAssertEqual("3 - 7", try! node.display())
   }
 
   func testMultiply() {
-    let node = GodNode(operator: Operator(operator: "*"), leftOperand: ValueNode(value: 3), rightOperand: ValueNode(value: 7))
+    let n = Operator.multiplyNode(ValueNode(3), ValueNode(7))
+    let node = Calculator(n)
     XCTAssertEqual(21, try! node.compute())
     XCTAssertEqual("3 * 7", try! node.display())
   }
